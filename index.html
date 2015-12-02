@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Test</title>
+<title>AppDock-Social</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
@@ -12,7 +12,19 @@
 <link rel="stylesheet" href="themes/my-custom-theme.css" />
 
 
-
+<style>
+.welcome-social{
+	min-height:850px;
+	background:url("images/homepagebg.png") no-repeat #312c0f;
+	background-position:center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+  	-o-background-size: cover;
+ 	background-size: cover;
+}
+.fix-btn{
+	margin-bottom:80px;
+}
 </style>
 
 </head>
@@ -20,11 +32,18 @@
 <body>
 <div data-role="page">
 	<div data-role="header">
-		<h1>App Dock * Social</h1>
+		<h1>App Dock - Social</h1>
 	</div>
-	<div data-role="page">
-
-	</div>
+	<div data-role="content" class="welcome-social">
+		<div class="ui-grid-">
+            <img src="images/homepage.png" alt="image" style="position: relative; top: 50%; left: 50%;   margin-left: -512px;"/>
+        </div>
+    	<div class="ui-grid-b" style="position: relative; top:70%">	
+		  <div class="ui-block-a"></div>
+		  <div class="ui-block-b fix-btn"><a href="#" data-role="button">START</a></div>
+		  <div class="ui-block-c"></div>
+		</div>
+  	</div>
 	<div data-role="footer">
 		<div data-role="navbar">
 				<ul>
@@ -32,7 +51,7 @@
 					<li><a href="#" data-icon="grid">Apps</a></li>
 					<li><a href="#" data-icon="alert">Developers</a></li>
 					<li><a href="#" data-icon="info">Feedback</a></li>
-					<li><a href="#" data-icon="star">Social</a></li>
+					<li><a href="#" data-icon="star" class="ui-btn-active ui-state-persist" >Social</a></li>
 				</ul>
 		</div>
 	</div>
