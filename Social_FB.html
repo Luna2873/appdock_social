@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Test</title>
+<title>Social_FB</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
@@ -68,10 +68,11 @@
 
 <div class="ui-block-c">
 				<div class="div_post">
+
 						<div id="camera_input"><input type="file" capture="camera" accept="image/*" id="takePictureField"><div>     
 						<div><img id="yourimage"></div>
-						<div><input type="text" id="comment"></input></div>
-						<button id="Set" >Post on Facebook</button>
+						<div><input type="text" id="comment" value="Say hello to AppDock users"></input></div>
+						<button id="Get" data-role="button">Post on Facebook</button>
 				</div>
 					    <script>
 						var desiredWidth;
@@ -80,15 +81,20 @@
 							$("#takePictureField").on("change",gotPic);
 							$('#camera_input').width(400);
 							$('#yourimage').width(400);
+							$('#yourimage').height(300);
 							$("#yourimage").load(getSwatches);
 							desiredWidth = window.innerWidth;
 					        
 					        if(!("url" in window) && ("webkitURL" in window)) {
 					            window.URL = window.webkitURL;   
 					        }
-						});
+						});		
 
-						$(document).
+						$("#Get").click(function () {
+							alert("This will works after release.");
+							var bla = $('#comment').val();
+							$('#showtext').val(bla);
+						    });
 
 						function gotPic(event) {
 					        if(event.target.files.length == 1 && 
@@ -96,8 +102,6 @@
 					            $("#yourimage").attr("src",URL.createObjectURL(event.target.files[0]));
 					        }
 						} 
-
-
 
 					    </script> 
 </div>
